@@ -1,9 +1,22 @@
-import React from 'react'
+import Link from "next/link";
+import {FaGithub , FaLinkedinIn , FaYoutube , FaTwitter} from "react-icons/fa";
 
-const Socials = () => {
+const socials = [
+    {icon:<FaGithub/> ,path:'https://github.com/NuthanB'},
+    {icon:<FaLinkedinIn/> ,path:''},
+    {icon:<FaYoutube/> ,path:''},
+    {icon:<FaTwitter/> ,path:''},
+
+
+]
+const Socials = ({containerStyles , iconStyles}) => {
   return (
-    <div>
-      socails
+    <div className={containerStyles}>
+        {socials.map((item , index)=>{
+            return <Link key={index} href={item.path} className={iconStyles}>
+                {item.icon}
+            </Link>
+        })}
     </div>
   )
 }
