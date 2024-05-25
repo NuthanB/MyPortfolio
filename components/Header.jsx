@@ -21,10 +21,9 @@ const Header = () => {
               <Button>Hire me</Button>
             </Link>
           </div>
-
-        {/* mobile nav */}
-        <div className="xl:hidden">mobile</div>
+        <div className="xl:hidden">
           <MobileNav/>
+        </div>
         </div>
     </header>
   )
